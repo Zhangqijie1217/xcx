@@ -1,13 +1,13 @@
 {
   "pages":[
-    "pages/movies/ratingbar/ratingbar",
+    "pages/movies/poster/poster",
     "pages/index/index",
     "pages/logs/logs"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#f66",
-    "navigationBarTitleText": "张启杰",
+    "navigationBarTitleText": "风潇潇兮",
     "navigationBarTextStyle":"white"
   },
   "tabBar": {
