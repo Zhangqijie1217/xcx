@@ -1,0 +1,31 @@
+{
+  "pages":[
+    "pages/movies/ratingbar/ratingbar",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#f66",
+    "navigationBarTitleText": "张启杰",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "电影",
+        "iconPath": "images/tabbar/movie.png",
+        "selectedIconPath": "images/tabbar/movieSelected.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "我的",
+        "iconPath": "images/tabbar/mine.png",
+        "selectedIconPath": "images/tabbar/mineSelected.png"
+      }
+    ],
+    "borderStyle": "black",
+    "selectedColor": "#f66"
+  }
+}

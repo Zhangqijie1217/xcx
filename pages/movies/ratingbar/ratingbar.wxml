@@ -1,0 +1,21 @@
+<view class="ratingbar-stars">
+
+  <block wx:for="{{count}}">
+      <image wx:if="{{stars/10>=index+1}}" src='/images/ratingbar/star_fill_whole.png'></image>
+      <image wx:elif="{{stars/10>=index && starts%10!=0}}" src='/images/ratingbar/star_fill_half.png'></image>
+      <image wx:else src='/images/ratingbar/star_fill_none.png'></image>
+  </block>
+  
+
+</view>
+
+<!-- <block wx:for="{{count}}">
+      <text>{{index}}:{{item}}</text>
+  </block>
+
+  <block wx:for="{{count1}}" wx:for-item="outer" wx:for-index="i">
+      <block wx:for="{{count2}}" wx:for-item="inner" wx:for-index="j">
+          <text>{{i}}:{{outer}}</text>
+          <text>{{j}}:{{inner}}</text>
+      </block>
+  </block> -->

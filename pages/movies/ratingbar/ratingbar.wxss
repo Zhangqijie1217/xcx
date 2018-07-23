@@ -1,0 +1,11 @@
+.ratingbar-stars {
+  display: flex;
+  flex-direction: row;
+  padding-right: 4rpx;
+}
+.ratingbar-stars image {
+  width: 17rpx;
+  height: 17rpx;
+  padding-top: 5rpx;
+  padding-right: 4rpx;
+}
