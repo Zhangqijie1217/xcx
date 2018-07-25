@@ -1,6 +1,8 @@
 {
   "pages":[
-    "pages/movies/poster/poster",
+    "pages/lists/lists",
+    "pages/detail/detail",
+    "pages/aboutme/aboutme",
     "pages/index/index",
     "pages/logs/logs"
   ],
