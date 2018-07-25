@@ -1,4 +1,25 @@
-  <!-- lists.wxml -->
-  <view class="lists">
-     123456
+<!-- lists.wxml -->
+<view class="warp">
+  <!-- 文章列表模板 begin -->
+  <template name="lists">
+    <navigator url="/pages/detail/detail?id={{id}}" hover-class="navigator-hover">
+      <view class='imgs'>
+        <image class='in-img' src="{{img}}" mode="cover"></image>
+      </view>
+      <view class='infos'>
+        <view class='title'>{{title}}</view>
+        <view class='date'>{{cTime}}</view>
+      </view>
+
+    </navigator>
+  </template>
+  <!-- 文章列表模板 end -->
+
+  <!-- 循环输出列表 begin -->
+  <view wx:for="{{newsList}}" class='list' wx:for-item="news">
+    <template is="lists" data="{{...news}}"></template>
   </view>
+
+  <!-- 循环输出列表 end -->
+
+</view>

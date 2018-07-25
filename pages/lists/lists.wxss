@@ -1,35 +1,34 @@
-.about {
-
+.wrap {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx;
 }
-.about-wei {
-    text-align: center;
+navigator {
+  overflow: hidden;
 }
-.about-img {
-    display: block;
-    width: 124px;
-    height: 110px;
-    margin: 2rpx auto 0;
+.list {
+  margin-bottom: 20rpx;
+  height: 200rpx;
+  position: relative;
 }
-.in-img {
-  width: 124px;
-  height: 110px;
-  margin: 2px auto 0;
+.imgs {
+  float: left;
 }
-.about-title {
-    display: inline-block;
-    margin: 2px 0;
+.imgs image {
+  display: block;
+  width: 200rpx;
+  height: 200rpx;
 }
-.about-content {
-  text-indent: 2em;
+.infos {
+  float: left;
+  width: 240rpx;
+  height: 200rpx;
+  padding: 20rpx 0 20rpx;
+}
+.date {
   font-size: 16px;
-  margin: 0 24px;
-  line-height: 1.5;
-}
-.about-addr {
-  font-size: 16px;
-  line-height: 2;
-  text-indent: 2em;
-}
-.about-tab {
-  margin-top: 20px;
+  color: #aaa;
+  position: absolute;
+   bottom: 0;
 }

@@ -1,35 +1,26 @@
-.about {
-
-}
-.about-wei {
-    text-align: center;
-}
-.about-img {
-    display: block;
-    width: 124px;
-    height: 110px;
-    margin: 2rpx auto 0;
-}
-.in-img {
-  width: 124px;
-  height: 110px;
-  margin: 2px auto 0;
-}
-.about-title {
-    display: inline-block;
-    margin: 2px 0;
-}
-.about-content {
-  text-indent: 2em;
+.wrap {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx;
   font-size: 16px;
-  margin: 0 24px;
-  line-height: 1.5;
 }
-.about-addr {
-  font-size: 16px;
-  line-height: 2;
+.title {
+  text-align: center;
+  padding: 20rpx;
+  font-size: 20px;
+}
+.cTime {
+  color: #ccc;
+}
+.img {
+  text-align: center;
+  padding: 20rpx;
+}
+.img image {
+  width: 120px;
+  height: 120px;
+}
+.content {
   text-indent: 2em;
-}
-.about-tab {
-  margin-top: 20px;
 }
