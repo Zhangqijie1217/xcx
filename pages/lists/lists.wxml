@@ -23,5 +23,5 @@
   <!-- 循环输出列表 end -->
 
 <view bindtap="loadMore" data-lastid="{{lastid}}" class='loadMore'>加载更多</view>
-<toast hidden="{{toastHidden}}" bindchange="toastChange">没有更多文章了</toast>
+<!-- <toast hidden="{{toastHidden}}" bindchange="toastChange">没有更多文章了</toast> -->
 </view>
