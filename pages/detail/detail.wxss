@@ -24,3 +24,9 @@
 .content {
   text-indent: 2em;
 }
+.close {
+  text-align: center;
+  margin: 30px;
+  font-size: 20px;
+  color: #aaa;
+}

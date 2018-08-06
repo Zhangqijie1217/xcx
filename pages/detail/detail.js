@@ -28,6 +28,9 @@ Page({
         })
       }
     })
+  },
+  closepage: function() {
+    wx.navigateBack()
   }
 
 })

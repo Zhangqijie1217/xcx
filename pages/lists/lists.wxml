@@ -22,6 +22,6 @@
 
   <!-- 循环输出列表 end -->
 
-  <view bindtap="loadMore" data-lastid="{{lastid}}" data-isfirst="{{isfirst}}" class='loadMore'>加载更多</view>
+  <view bindtap="loadMore" data-lastid="{{lastid}}" data-isfirst="{{isfirst}}" class='loadMore' style="display:{{moreHidden}}">加载更多</view>
   <!-- <view class="noneMore" hidden="{{toastHidden}}" bindchange="toastChange">没有更多文章了</view> -->
 </view>

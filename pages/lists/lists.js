@@ -6,11 +6,12 @@ Page({
   data: {
     newsList: [],
     lastid: 0, //每条数据对应的索引
-    isfirst: 1 //只让提示wifi弹窗显示第一次
+    isfirst: 1, //只让提示wifi弹窗显示第一次
+    moreHidden: 'none'
   },
 
   loadData: function(lastid) {
-    var limit = 2
+    var limit = 5
     var that = this
     wx.request({
       url: 'http://localhost/weicms/index.php?s=/addon/Cms/Cms/getList', //仅为示例，并非真实的接口地址
@@ -23,6 +24,7 @@ Page({
       },
       success: function(res) {
         if (!res.data) {
+          that.setData({ moreHidden:'none' })
           wx.showToast({
             title: '没有更多了',
             icon: 'success',
@@ -38,9 +40,8 @@ Page({
         var dataArr = that.data.newsList
         var newData = dataArr.concat(res.data); //数据合并
 
-        that.setData({
-          newsList: newData
-        })
+        that.setData({ newsList: newData })
+        that.setData({ moreHidden: '' })
       }
     })
   },
@@ -81,7 +82,15 @@ Page({
   },
   onLoad: function() {
     var that = this
-
+    wx.showNavigationBarLoading()
     this.loadData(0);
+  },
+  onReady: function () {
+    var that = this
+
+    wx.setNavigationBarTitle({
+      title: '文章列表'
+    })
+    wx.hideNavigationBarLoading()
   }
 })
