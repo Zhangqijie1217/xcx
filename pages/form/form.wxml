@@ -1,38 +1,62 @@
-<form bindsubmit="formSubmit" bindreset="formReset">
-  <view class="section">
+<form bindsubmit="formSubmit">
+  <view class="section section_gap">
     <view class="section__title">姓名</view>
     <input name="username" placeholder="请输入姓名" />
   </view>
-
   <view class="section section_gap">
-    <view class="section__title">switch</view>
-    <switch name="switch"/>
-  </view>
-  <view class="section section_gap">
-    <view class="section__title">slider</view>
-    <slider name="slider" show-value ></slider>
-  </view>
-
-  <view class="section">
-    <view class="section__title">input</view>
-    <input name="input" placeholder="please input here" />
-  </view>
-  <view class="section section_gap">
-    <view class="section__title">radio</view>
-    <radio-group name="radio-group">
-      <label><radio value="radio1"/>radio1</label>
-      <label><radio value="radio2"/>radio2</label>
-    </radio-group>
-  </view>
-  <view class="section section_gap">
-    <view class="section__title">checkbox</view>
-    <checkbox-group name="checkbox">
-      <label><checkbox value="checkbox1"/>checkbox1</label>
-      <label><checkbox value="checkbox2"/>checkbox2</label>
+    <view class="section__title">关注的领域</view>
+    <checkbox-group name="product">
+      <label>
+        <checkbox value="0" />微商城</label>
+      <label>
+        <checkbox value="1" />微社区</label>
+      <label>
+        <checkbox value="2" />乐瑶</label>
     </checkbox-group>
   </view>
-  <view class="btn-area">
-    <button formType="submit">Submit</button>
-    <button formType="reset">Reset</button>
+  <view class="section section_gap">
+    <view class="section__title">来源渠道</view>
+    <radio-group name="form">
+      <label>
+        <radio value="0" />百度搜索来的</label>
+      <label>
+        <radio value="1" />朋友介绍</label>
+      <label>
+        <radio value="2" />公众号推送</label>
+    </radio-group>
+  </view>
+  <view class="section">
+    <view class="section__title">你所在地区</view>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" bindchange="bindPickerChange">
+      <view class="picker">
+        当前选择：{{array[index]}}
+      </view>
+    </picker>
+  </view>
+  <view class="section">
+    <view class="section__title">反馈时间</view>
+    <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+      <view class="picker">
+        当前选择: {{time}}
+      </view>
+    </picker>
+  </view>
+  <view class="section section_gap">
+    <text class="section__title">请给我们打分</text>
+    <view class="body-view">
+      <slider bindchange="slider3change" max="100" min="0" show-value bindchange="bindSliderChange"/>
+    </view>
+  </view>
+
+  <view class="section section_gap">
+    <view class="section__title">你是前端开发人员吗</view>
+    <switch name="switch" />
+  </view>
+
+
+
+
+  <view class="btn-area section_gap">
+    <button formType="submit">提交反馈</button>
   </view>
 </form>

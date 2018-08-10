@@ -23,6 +23,7 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success: function(res) {
+        console.log('success:456')
         if (!res.data) {
           that.setData({ moreHidden:'none' })
           wx.showToast({
@@ -42,7 +43,9 @@ Page({
 
         that.setData({ newsList: newData })
         that.setData({ moreHidden: '' })
-      }
+      },error: function() {
+        console.log('error:123')
+      },
     })
   },
   loadMore: function(event) {
